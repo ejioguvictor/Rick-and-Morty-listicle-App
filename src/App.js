@@ -28,7 +28,7 @@ function App() {
       <h1 className="text-center ubuntu my-4">Rick and Morty  <span className="text-primary">listicle 👱‍♂️</span>
       </h1>
 
-      <Search setSearch={setSearch} />
+      <Search setPageNumber={setPageNumber} setSearch={setSearch} />
 
       <div className="container">
         <div className="row">
