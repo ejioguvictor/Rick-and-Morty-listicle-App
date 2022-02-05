@@ -12,7 +12,6 @@ function App() {
   let [fetchedData, updateFetchedData] = useState([]);
   let { info, results } = fetchedData
 
-  console.log(pageNumber)
   let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`
 
   useEffect(() => {
@@ -25,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="text-center ubuntu my-4">Rick and Morty  <span className="text-primary">listicle 👱‍♂️</span>
+      <h1 className="text-center ubuntu my-4">Rick and Morty<span className="text-primary">listicle 👱‍♂️</span>
       </h1>
 
       <Search setPageNumber={setPageNumber} setSearch={setSearch} />
@@ -44,7 +43,10 @@ function App() {
         </div>
       </div>
 
-      <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />
+      <Pagination
+        info={info}
+        pageNumber={pageNumber}
+        setPageNumber={setPageNumber} />
     </div>
   );
 }
