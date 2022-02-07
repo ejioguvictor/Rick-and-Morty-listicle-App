@@ -24,16 +24,14 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="text-center ubuntu my-4">Rick and Morty<span className="text-primary">listicle 👱‍♂️</span>
+      <h1 className="text-center ubuntu my-4">Rick and Morty <span className="text-primary">listicle 👱‍♂️</span>
       </h1>
 
       <Search setPageNumber={setPageNumber} setSearch={setSearch} />
 
       <div className="container">
         <div className="row">
-          <div className="col-3">
-            <Filters />
-          </div>
+          <Filters />
           <div className="col-8">
             <div className="row">
               <Cards results={results} />
