@@ -14,7 +14,7 @@ const Status = () => {
       <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
         <div className="accordion-body">
           {status.map((items, index) => (
-            <FilterBTN key={index} />
+            <FilterBTN key={index} name="status" index={index} items={items} />
           ))}
         </div>
       </div>
