@@ -19,7 +19,10 @@ const Pagination = ({ info, pageNumber, setPageNumber }) => {
         {`
         @media (max-width: 768px){
           .next, .prev{
-            dispslay: none
+            dispslay: none;
+          }
+          .pagination{
+            font-size: 14px;
           }
         }
       `}
@@ -33,6 +36,8 @@ const Pagination = ({ info, pageNumber, setPageNumber }) => {
         previousClassName='btn prev'
         pageClassName='page-item'
         pageLinkClassName='page-link'
+        marginPagesDisplayed={width < 576 ? 1 : 2}
+        pageRangeDisplayed={width < 576 ? 1 : 2}
         activeClassName='active'
         onPageChange={(data) => {
           setPageNumber(data.selected + 1)
